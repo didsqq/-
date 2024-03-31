@@ -26,9 +26,15 @@ namespace OAIP_10
             if (radioButton1.Checked == true)
             {
                 int[] mas = GenerateArray(10, 1, 100);
+                for (int j = 0; j < mas.Length; j++)
+                {
+                    richTextBox1.Text += mas[j] + " ";
+                }
+                richTextBox1.Text = "\n";
+
                 mas = ViborSort(mas);
 
-                richTextBox1.Text = "";
+                richTextBox1.Text = "\n";
                 for (int i = 0; i < mas.Length; i++)
                 {
                     if (i != mas.Length - 1)
@@ -43,7 +49,7 @@ namespace OAIP_10
                 int[] mas = GenerateArray(10, 1, 100);
                 mas = QuickSort(mas, 0, mas.Length - 1);
 
-                richTextBox1.Text = "";
+                richTextBox1.Text = "\n";
                 for (int i = 0; i < mas.Length; i++)
                 {
                     if (i != mas.Length - 1)
@@ -70,14 +76,10 @@ namespace OAIP_10
             return array;
         }
 
-        static int[] ViborSort(int[] mas)
+        int[] ViborSort(int[] mas)
         {
             for (int i = 0; i < mas.Length - 1; i++)
             {
-                for(int j = 0; j < mas.Length - 1; j++)
-                {
-                    richTextBox1.Text += mas[i];
-                }
                 //поиск минимального числа
                 int min = i;
                 for (int j = i + 1; j < mas.Length; j++)
@@ -91,6 +93,11 @@ namespace OAIP_10
                 int temp = mas[min];
                 mas[min] = mas[i];
                 mas[i] = temp;
+                Console.WriteLine("\n");
+                for (int j = 0; j < mas.Length; j++)
+                {
+                    richTextBox1.Text += mas[j] + " ";
+                }
             }
             return mas;
         }
