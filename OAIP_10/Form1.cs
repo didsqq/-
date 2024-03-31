@@ -15,41 +15,39 @@ namespace OAIP_10
         public Form1()
         {
             InitializeComponent();
+            trackBar1.Scroll += trackBar1_Scroll;
+        }
+
+        private int[] mas;
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            textBox1.Text = String.Format("{0}", trackBar1.Value);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Sort();
+            if(mas != null)
+                Sort(mas);
+            else
+                MessageBox.Show("Создайте массив");
         }
         private void button2_Click(object sender, EventArgs e)
         {
+            richTextBox1.Text = "";
             int value = trackBar1.Value;
-            int[] mas = GenerateArray(value, 1, 100);
+            mas = GenerateArray(value, 1, 50);
+            output(mas);
         }
 
-        private void Sort(){
+        private void Sort(int[] mas){
             if (radioButton1.Checked == true)
             {
-                richTextBox1.Text = "";
-                int[] mas = GenerateArray(10, 1, 100);
-                output(mas);
-
-                mas = ViborSort(mas);
-
-                richTextBox1.Text += "\n";
-                output(mas);
-
+                ViborSort(mas);
             }
             else if (radioButton2.Checked == true)
             {
-                richTextBox1.Text = "";
-                int[] mas = GenerateArray(10, 1, 100);
-                output(mas);
-
-                mas = QuickSort(mas, 0, mas.Length - 1);
-
-                richTextBox1.Text += "\n";
-                output(mas);
+                QuickSort(mas, 0, mas.Length - 1);
             }
             else
             {
@@ -69,7 +67,7 @@ namespace OAIP_10
             return array;
         }
 
-        int[] ViborSort(int[] mas)
+        private void ViborSort(int[] mas)
         {
             for (int i = 0; i < mas.Length - 1; i++)
             {
@@ -87,10 +85,9 @@ namespace OAIP_10
                 richTextBox1.Text += "\n";
                 output(mas);
             }
-            return mas;
         }
 
-        int[] QuickSort(int[] array, int a, int b)
+        private void QuickSort(int[] array, int a, int b)
         {
             int i = a;
             int j = b;
@@ -124,7 +121,6 @@ namespace OAIP_10
             {
                 QuickSort(array, i, b);
             }
-            return array;
         }
         
         private void output(int[] mas)

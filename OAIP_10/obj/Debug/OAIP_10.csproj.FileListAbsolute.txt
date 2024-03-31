@@ -8,3 +8,13 @@ C:\Users\Адель\Desktop\OAIP_10\OAIP_10\obj\Debug\OAIP_10.csproj.GenerateRes
 C:\Users\Адель\Desktop\OAIP_10\OAIP_10\obj\Debug\OAIP_10.csproj.CoreCompileInputs.cache
 C:\Users\Адель\Desktop\OAIP_10\OAIP_10\obj\Debug\OAIP_10.exe
 C:\Users\Адель\Desktop\OAIP_10\OAIP_10\obj\Debug\OAIP_10.pdb
+C:\Users\Господин\Desktop\-\OAIP_10\bin\Debug\OAIP_10.exe.config
+C:\Users\Господин\Desktop\-\OAIP_10\bin\Debug\OAIP_10.exe
+C:\Users\Господин\Desktop\-\OAIP_10\bin\Debug\OAIP_10.pdb
+C:\Users\Господин\Desktop\-\OAIP_10\obj\Debug\OAIP_10.csproj.AssemblyReference.cache
+C:\Users\Господин\Desktop\-\OAIP_10\obj\Debug\OAIP_10.Form1.resources
+C:\Users\Господин\Desktop\-\OAIP_10\obj\Debug\OAIP_10.Properties.Resources.resources
+C:\Users\Господин\Desktop\-\OAIP_10\obj\Debug\OAIP_10.csproj.GenerateResource.cache
+C:\Users\Господин\Desktop\-\OAIP_10\obj\Debug\OAIP_10.csproj.CoreCompileInputs.cache
+C:\Users\Господин\Desktop\-\OAIP_10\obj\Debug\OAIP_10.exe
+C:\Users\Господин\Desktop\-\OAIP_10\obj\Debug\OAIP_10.pdb
