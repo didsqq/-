@@ -21,42 +21,35 @@ namespace OAIP_10
         {
             Sort();
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int value = trackBar1.Value;
+            int[] mas = GenerateArray(value, 1, 100);
+        }
 
         private void Sort(){
             if (radioButton1.Checked == true)
             {
+                richTextBox1.Text = "";
                 int[] mas = GenerateArray(10, 1, 100);
-                for (int j = 0; j < mas.Length; j++)
-                {
-                    richTextBox1.Text += mas[j] + " ";
-                }
-                richTextBox1.Text = "\n";
+                output(mas);
 
                 mas = ViborSort(mas);
 
-                richTextBox1.Text = "\n";
-                for (int i = 0; i < mas.Length; i++)
-                {
-                    if (i != mas.Length - 1)
-                        richTextBox1.Text += mas[i] + " ";
-                    else
-                        richTextBox1.Text += mas[i];
-                }
+                richTextBox1.Text += "\n";
+                output(mas);
 
             }
             else if (radioButton2.Checked == true)
             {
+                richTextBox1.Text = "";
                 int[] mas = GenerateArray(10, 1, 100);
+                output(mas);
+
                 mas = QuickSort(mas, 0, mas.Length - 1);
 
-                richTextBox1.Text = "\n";
-                for (int i = 0; i < mas.Length; i++)
-                {
-                    if (i != mas.Length - 1)
-                        richTextBox1.Text += mas[i] + " ";
-                    else
-                        richTextBox1.Text += mas[i];
-                }
+                richTextBox1.Text += "\n";
+                output(mas);
             }
             else
             {
@@ -80,7 +73,6 @@ namespace OAIP_10
         {
             for (int i = 0; i < mas.Length - 1; i++)
             {
-                //поиск минимального числа
                 int min = i;
                 for (int j = i + 1; j < mas.Length; j++)
                 {
@@ -89,20 +81,16 @@ namespace OAIP_10
                         min = j;
                     }
                 }
-                //обмен элементов
                 int temp = mas[min];
                 mas[min] = mas[i];
                 mas[i] = temp;
-                Console.WriteLine("\n");
-                for (int j = 0; j < mas.Length; j++)
-                {
-                    richTextBox1.Text += mas[j] + " ";
-                }
+                richTextBox1.Text += "\n";
+                output(mas);
             }
             return mas;
         }
 
-        static int[] QuickSort(int[] array, int a, int b)
+        int[] QuickSort(int[] array, int a, int b)
         {
             int i = a;
             int j = b;
@@ -124,6 +112,8 @@ namespace OAIP_10
                     array[j] = temporaryVariable;
                     i++;
                     j--;
+                    richTextBox1.Text += "\n";
+                    output(array);
                 }
             }
             if (a < j)
@@ -135,6 +125,17 @@ namespace OAIP_10
                 QuickSort(array, i, b);
             }
             return array;
+        }
+        
+        private void output(int[] mas)
+        {
+            for (int i = 0; i < mas.Length; i++)
+            {
+                if (i != mas.Length - 1)
+                    richTextBox1.Text += mas[i] + " ";
+                else
+                    richTextBox1.Text += mas[i];
+            }
         }
     }
 }
