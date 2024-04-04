@@ -12,118 +12,78 @@ namespace OAIP_10
 {
     public partial class Form1 : Form
     {
+        Random random = new Random();
+
+        private static int comparissons = 0;
+        private static int permutations = 0;
+        public static string time = "MM:SS:MS";
+        public static Form1 Instance;
+
         public Form1()
         {
             InitializeComponent();
             trackBar1.Scroll += trackBar1_Scroll;
+            Instance = this;
         }
 
-        private int[] mas;
-
+        public static void ReadInfo(int comp, int perm, string ti)
+        {
+            comparissons = comp;
+            permutations = perm;
+            time = ti;
+        }
+        public static void AddSortLine(string str)
+        {
+            Instance.richTextBox1.Text += str + '\n';
+        }
+        public static void FillFirstLine()
+        {
+            Instance.richTextBox1.Text = "Исходный массив:\n";
+            foreach (var i in Context.array)
+                Instance.richTextBox1.Text += i + " ";
+            Instance.richTextBox1.Text += "\n\n";
+        }
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             textBox1.Text = String.Format("{0}", trackBar1.Value);
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if(mas != null)
-                Sort(mas);
-            else
-                MessageBox.Show("Создайте массив");
-        }
         private void button2_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = "";
-            int value = trackBar1.Value;
-            mas = GenerateArray(value, 1, 50);
-            output(mas);
-        }
+            var newArr = new int[trackBar1.Value];
 
-        private void Sort(int[] mas){
-            if (radioButton1.Checked == true)
-            {
-                ViborSort(mas);
-            }
-            else if (radioButton2.Checked == true)
-            {
-                QuickSort(mas, 0, mas.Length - 1);
-            }
+            for(int i = 0; i < newArr.Length; i++)
+                newArr[i] = random.Next(0,100);
+
+            Context.array = newArr;
+            FillFirstLine();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var mboxResult = MessageBox.Show("Подготовить файл для сохранения?", "Внимание", MessageBoxButtons.YesNo);
+
+            var flag = mboxResult == DialogResult.Yes;
+
+            Context context;
+            if (radioButton2.Checked)
+                context = new Context(new ImprovedSort());
             else
-            {
-                MessageBox.Show("Выберите метод");
-            }
+                context = new Context(new SimpleSort());
+            context.SortArr(flag);
+            output(Context.array);
+            //FileOut.sorted = true;
+            PrintInfo(comparissons, permutations, time);
         }
-        static int[] GenerateArray(int length, int minValue, int maxValue)
+        private void PrintInfo(int comparissons, int permutations, string time)
         {
-            int[] array = new int[length];
-            Random rand = new Random();
-
-            for (int i = 0; i < length; i++)
-            {
-                array[i] = rand.Next(minValue, maxValue + 1);
-            }
-
-            return array;
-        }
-
-        private void ViborSort(int[] mas)
-        {
-            for (int i = 0; i < mas.Length - 1; i++)
-            {
-                int min = i;
-                for (int j = i + 1; j < mas.Length; j++)
-                {
-                    if (mas[j] < mas[min])
-                    {
-                        min = j;
-                    }
-                }
-                int temp = mas[min];
-                mas[min] = mas[i];
-                mas[i] = temp;
-                richTextBox1.Text += "\n";
-                output(mas);
-            }
-        }
-
-        private void QuickSort(int[] array, int a, int b)
-        {
-            int i = a;
-            int j = b;
-            int middle = array[(a + b) / 2];
-            while (i <= j)
-            {
-                while (array[i] < middle)
-                {
-                    i++;
-                }
-                while (array[j] > middle)
-                {
-                    j--;
-                }
-                if (i <= j)
-                {
-                    int temporaryVariable = array[i];
-                    array[i] = array[j];
-                    array[j] = temporaryVariable;
-                    i++;
-                    j--;
-                    richTextBox1.Text += "\n";
-                    output(array);
-                }
-            }
-            if (a < j)
-            {
-                QuickSort(array, a, j);
-            }
-            if (i < b)
-            {
-                QuickSort(array, i, b);
-            }
+            label_permutations.Text = Convert.ToString(permutations);
+            label_comparissons.Text = Convert.ToString(comparissons);
+            label_time.Text = time;
         }
         
-        private void output(int[] mas)
+
+
+        
+        public void output(int[] mas)
         {
             for (int i = 0; i < mas.Length; i++)
             {
