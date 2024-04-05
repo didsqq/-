@@ -59,13 +59,13 @@ namespace OAIP_10
         {
             comprassions++;
 
-            /*if(flag && FileOut.fileString = null)
+            if(flag && FileOut.fileString == null)
             {
                 FileOut.fileString = "Исходный массив: ";
-                FileOut.Fill;
+                FileOut.Fill();
             }
             if (flag)
-                FileOut.fileString += $"Сравнение {comprassions}: " + $"{arr[ind1]} и {arr[ind2]}\n";*/
+                FileOut.fileString += $"Сравнение {comprassions}: " + $"{arr[ind1]} и {arr[ind2]}\n";
             return true;
         }
     }

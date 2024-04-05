@@ -43,6 +43,7 @@ namespace OAIP_10
                 Instance.richTextBox1.Text += i + " ";
             Instance.richTextBox1.Text += "\n\n";
         }
+
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             textBox1.Text = String.Format("{0}", trackBar1.Value);
@@ -68,9 +69,9 @@ namespace OAIP_10
                 context = new Context(new ImprovedSort());
             else
                 context = new Context(new SimpleSort());
-            context.SortArr(flag);
 
-            //FileOut.sorted = true;
+            context.SortArr(flag);
+            FileOut.sorted = true;
             PrintInfo(comparissons, permutations, time);
         }
         private void PrintInfo(int comparissons, int permutations, string time)
@@ -79,10 +80,5 @@ namespace OAIP_10
             label_comparissons.Text = Convert.ToString(comparissons);
             label_time.Text = time;
         }
-        
-
-
-        
-
     }
 }
