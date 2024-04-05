@@ -69,7 +69,7 @@ namespace OAIP_10
             else
                 context = new Context(new SimpleSort());
             context.SortArr(flag);
-            output(Context.array);
+
             //FileOut.sorted = true;
             PrintInfo(comparissons, permutations, time);
         }
@@ -83,15 +83,6 @@ namespace OAIP_10
 
 
         
-        public void output(int[] mas)
-        {
-            for (int i = 0; i < mas.Length; i++)
-            {
-                if (i != mas.Length - 1)
-                    richTextBox1.Text += mas[i] + " ";
-                else
-                    richTextBox1.Text += mas[i];
-            }
-        }
+
     }
 }
