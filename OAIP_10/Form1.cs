@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace OAIP_10
 {
@@ -79,6 +80,38 @@ namespace OAIP_10
             label_permutations.Text = Convert.ToString(permutations);
             label_comparissons.Text = Convert.ToString(comparissons);
             label_time.Text = time;
+        }
+
+        private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var sfd = new SaveFileDialog();
+            sfd.Filter = "Text files (*.txt)|*.txt";
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+                FileOut.SaveFile(sfd.FileName);
+        }
+
+        private void импортироватьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string text;
+            var ofd = new OpenFileDialog();
+            ofd.Filter = "Text files(*.txt)|*.txt";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+                using (var reader = new StreamReader(ofd.FileName))
+                    text = reader.ReadToEnd();
+            else
+                return;
+
+            var stringArr = text.Split(' ');
+            var intArr = new int[stringArr.Length];
+
+            for (int i = 0; i < stringArr.Length; i++)
+                int.TryParse(stringArr[i], out intArr[i]);
+
+            Context.array = intArr;
+
+            FillFirstLine();
         }
     }
 }

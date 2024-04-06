@@ -1,14 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\OAIP_10\\",
+  "WorkspaceRootPath": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\1\\OAIP_10\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{985CA02F-86E9-49F5-9A98-A320B79749B6}|OAIP_10\\OAIP_10.csproj|c:\\users\\\u0430\u0434\u0435\u043B\u044C\\desktop\\oaip_10\\oaip_10\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{985CA02F-86E9-49F5-9A98-A320B79749B6}|OAIP_10\\OAIP_10.csproj|c:\\users\\\u0430\u0434\u0435\u043B\u044C\\desktop\\1\\oaip_10\\oaip_10\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{985CA02F-86E9-49F5-9A98-A320B79749B6}|OAIP_10\\OAIP_10.csproj|solutionrelative:oaip_10\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985CA02F-86E9-49F5-9A98-A320B79749B6}|OAIP_10\\OAIP_10.csproj|C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\OAIP_10\\oaip_10\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{985CA02F-86E9-49F5-9A98-A320B79749B6}|OAIP_10\\OAIP_10.csproj|C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\1\\OAIP_10\\oaip_10\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{985CA02F-86E9-49F5-9A98-A320B79749B6}|OAIP_10\\OAIP_10.csproj|solutionrelative:oaip_10\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985CA02F-86E9-49F5-9A98-A320B79749B6}|OAIP_10\\OAIP_10.csproj|c:\\users\\\u0430\u0434\u0435\u043B\u044C\\desktop\\1\\oaip_10\\oaip_10\\fileout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985CA02F-86E9-49F5-9A98-A320B79749B6}|OAIP_10\\OAIP_10.csproj|solutionrelative:oaip_10\\fileout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985CA02F-86E9-49F5-9A98-A320B79749B6}|OAIP_10\\OAIP_10.csproj|c:\\users\\\u0430\u0434\u0435\u043B\u044C\\desktop\\1\\oaip_10\\oaip_10\\improvedsort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985CA02F-86E9-49F5-9A98-A320B79749B6}|OAIP_10\\OAIP_10.csproj|solutionrelative:oaip_10\\improvedsort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,17 +26,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ImprovedSort.cs",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\1\\OAIP_10\\OAIP_10\\ImprovedSort.cs",
+              "RelativeDocumentMoniker": "OAIP_10\\ImprovedSort.cs",
+              "ToolTip": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\1\\OAIP_10\\OAIP_10\\ImprovedSort.cs",
+              "RelativeToolTip": "OAIP_10\\ImprovedSort.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T06:33:40.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FileOut.cs",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\1\\OAIP_10\\OAIP_10\\FileOut.cs",
+              "RelativeDocumentMoniker": "OAIP_10\\FileOut.cs",
+              "ToolTip": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\1\\OAIP_10\\OAIP_10\\FileOut.cs",
+              "RelativeToolTip": "OAIP_10\\FileOut.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T06:16:12.803Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\OAIP_10\\OAIP_10\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\1\\OAIP_10\\OAIP_10\\Form1.cs",
               "RelativeDocumentMoniker": "OAIP_10\\Form1.cs",
-              "ToolTip": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\OAIP_10\\OAIP_10\\Form1.cs",
+              "ToolTip": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\1\\OAIP_10\\OAIP_10\\Form1.cs",
               "RelativeToolTip": "OAIP_10\\Form1.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwBgAAAAJAAAA",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAgwG0AAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-30T11:32:08.451Z",
               "EditorCaption": ""
@@ -37,9 +71,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\OAIP_10\\OAIP_10\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\1\\OAIP_10\\OAIP_10\\Form1.cs",
               "RelativeDocumentMoniker": "OAIP_10\\Form1.cs",
-              "ToolTip": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\OAIP_10\\OAIP_10\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\1\\OAIP_10\\OAIP_10\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "OAIP_10\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-30T11:20:13.215Z",
