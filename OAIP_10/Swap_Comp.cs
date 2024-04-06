@@ -37,7 +37,7 @@ namespace OAIP_10
             }
             if (flag)
                 FileOut.fileString += $"Сравнение {comprassions}: " + $"{arr[ind1]} и {arr[ind2]}\n";
-            return true;
+            return arr[ind1] < arr[ind2];
         }
     }
 }

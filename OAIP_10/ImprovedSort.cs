@@ -9,6 +9,8 @@ namespace OAIP_10
 {
     class ImprovedSort: IStrategy
     {
+        private int permutations;
+        private int comprassions;
         public void SortArr(int[] array, bool flag)
         {
             int a = 0;
@@ -28,7 +30,7 @@ namespace OAIP_10
                 }
                 if (i <= j)
                 {
-                    Swap(array, i, j);
+                    Swap_Comp.Swap(array, i, j, flag, permutations);
                     i++;
                     j--;
                 }
@@ -41,13 +43,6 @@ namespace OAIP_10
             {
                 SortArr(array, false);
             }
-        }
-
-        private void Swap(int[] array, int j, int i)
-        {
-            int temporaryVariable = array[i];
-            array[i] = array[j];
-            array[j] = temporaryVariable;
         }
     }
 }

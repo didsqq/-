@@ -113,5 +113,16 @@ namespace OAIP_10
 
             FillFirstLine();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(textBox1.Text, out int value))
+            {
+                if (value >= trackBar1.Minimum && value <= trackBar1.Maximum)
+                {
+                    trackBar1.Value = value;
+                }
+            }
+        }
     }
 }

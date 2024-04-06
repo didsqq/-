@@ -21,7 +21,7 @@ namespace OAIP_10
                 int min = i;
                 for (int j = i + 1; j < mas.Length; j++)
                 {
-                    if (mas[j] < mas[min] && Swap_Comp.Comprassions(mas, j, min, flag, comprassions))
+                    if (Swap_Comp.Comprassions(mas, j, min, flag, comprassions))
                     {
                         min = j;
                         comprassions++;
