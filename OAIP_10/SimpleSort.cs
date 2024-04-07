@@ -36,6 +36,11 @@ namespace OAIP_10
             var resultTime = sw.Elapsed;
             string time = String.Format("{0:00}:{1:00}.{2:000}", resultTime.Minutes, resultTime.Seconds, resultTime.Milliseconds);
             Form1.ReadInfo(comprassions, permutations, time);
+
+            string sortString = "";
+            for (int i = 0; i < mas.Length; i++)
+                    sortString += mas[i] + " ";
+            Form1.AddSortLine(sortString);
         }
     }
 }
