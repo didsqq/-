@@ -14,9 +14,17 @@ namespace OAIP_10
         public void SortArr(int[] array, bool flag)
         {
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
-            sw.Start();
-            int a = 0;
-            int b = array.Length-1;
+
+            FastSortArr(array, 0, array.Length - 1,flag);
+
+            sw.Stop();
+            var resultTime = sw.Elapsed;
+            string time = String.Format("{0:00}:{1:00}.{2:000}", resultTime.Minutes, resultTime.Seconds, resultTime.Milliseconds);
+            Form1.ReadInfo(comprassions, permutations, time);
+        }
+
+        public void FastSortArr(int[] array,int a, int b, bool flag)
+        {
             int i = a;
             int j = b;
             int middle = array[(a + b) / 2];
@@ -40,17 +48,12 @@ namespace OAIP_10
             }
             if (a < j)
             {
-                SortArr(array, true);
+                FastSortArr(array, a, j, flag);
             }
             if (i < b)
             {
-                SortArr(array, false);
+                FastSortArr(array, i, b, flag);
             }
-
-            sw.Stop();
-            var resultTime = sw.Elapsed;
-            string time = String.Format("{0:00}:{1:00}.{2:000}", resultTime.Minutes, resultTime.Seconds, resultTime.Milliseconds);
-            Form1.ReadInfo(comprassions, permutations, time);
         }
     }
 }
