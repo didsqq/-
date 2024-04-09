@@ -89,6 +89,7 @@ namespace OAIP_10
 
             if (sfd.ShowDialog() == DialogResult.OK)
                 FileOut.SaveFile(sfd.FileName);
+            FileOut.fileString = null;
         }
 
         private void импортироватьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -123,6 +124,11 @@ namespace OAIP_10
                     trackBar1.Value = value;
                 }
             }
+        }
+
+        private void анализToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

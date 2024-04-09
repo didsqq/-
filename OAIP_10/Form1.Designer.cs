@@ -49,8 +49,8 @@
             this.данныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.импортироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.анализToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -269,27 +269,28 @@
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
             // импортироватьToolStripMenuItem
             // 
             this.импортироватьToolStripMenuItem.Name = "импортироватьToolStripMenuItem";
-            this.импортироватьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.импортироватьToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.импортироватьToolStripMenuItem.Text = "Импортировать";
             this.импортироватьToolStripMenuItem.Click += new System.EventHandler(this.импортироватьToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             // 
             // анализToolStripMenuItem
             // 
             this.анализToolStripMenuItem.Name = "анализToolStripMenuItem";
             this.анализToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.анализToolStripMenuItem.Text = "Анализ";
+            this.анализToolStripMenuItem.Click += new System.EventHandler(this.анализToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             // 
             // Form1
             // 
