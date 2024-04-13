@@ -9,5 +9,6 @@ namespace OAIP_10
     interface IStrategy
     {
         void SortArr(int[] arr, bool flag);
-    }
+        void AnalSortArr(AnalInfo analInfo);
+    } 
 }

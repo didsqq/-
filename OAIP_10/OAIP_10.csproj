@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnalInfo.cs" />
+    <Compile Include="Anal_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anal_Form.Designer.cs">
+      <DependentUpon>Anal_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Context.cs" />
     <Compile Include="FileOut.cs" />
     <Compile Include="Form1.cs">
@@ -60,6 +67,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleSort.cs" />
     <Compile Include="Swap_Comp.cs" />
+    <EmbeddedResource Include="Anal_Form.resx">
+      <DependentUpon>Anal_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

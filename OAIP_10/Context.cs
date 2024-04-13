@@ -19,5 +19,10 @@ namespace OAIP_10
         {
             strategy.SortArr(array, flag);
         }
+
+        public void AnalSortArr(AnalInfo sort)
+        {
+            strategy.AnalSortArr(sort);
+        }
     }
 }

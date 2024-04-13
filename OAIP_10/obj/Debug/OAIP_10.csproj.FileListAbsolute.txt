@@ -28,3 +28,4 @@ C:\Users\Адель\Desktop\1\OAIP_10\OAIP_10\obj\Debug\OAIP_10.csproj.GenerateR
 C:\Users\Адель\Desktop\1\OAIP_10\OAIP_10\obj\Debug\OAIP_10.csproj.CoreCompileInputs.cache
 C:\Users\Адель\Desktop\1\OAIP_10\OAIP_10\obj\Debug\OAIP_10.exe
 C:\Users\Адель\Desktop\1\OAIP_10\OAIP_10\obj\Debug\OAIP_10.pdb
+C:\Users\Адель\Desktop\OAIP_10\OAIP_10\obj\Debug\OAIP_10.Anal_Form.resources

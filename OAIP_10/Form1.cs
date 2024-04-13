@@ -128,7 +128,8 @@ namespace OAIP_10
 
         private void анализToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Anal_Form anal = new Anal_Form();
+            anal.ShowDialog();
         }
     }
 }
