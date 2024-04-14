@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OAIP_10
 {
-    internal class AnalInfo
+    public class AnalInfo
     {
         public int count = 0;
         public int comprassions = 0;

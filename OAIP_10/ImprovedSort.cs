@@ -9,8 +9,8 @@ namespace OAIP_10
 {
     class ImprovedSort: IStrategy
     {
-        private int permutations;
-        private int comprassions;
+        private int permutations = 0;
+        private int comprassions = 0;
         public void SortArr(int[] array, bool flag)
         {
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
@@ -33,15 +33,15 @@ namespace OAIP_10
         {
             int i = a;
             int j = b;
-            int middle = array[(a + b) / 2];
+            int middle = (a + b) / 2;
             while (i <= j)
             {
-                while (Swap_Comp.Comprassions(array, i, (a + b) / 2, flag, comprassions))//array[i] < middle
+                while (Swap_Comp.Comprassions(array, i, middle, flag, comprassions))//array[i] < middle
                 {
                     i++;
                     comprassions++;
                 }
-                while (Swap_Comp.Comprassions(array, (a + b) / 2, j, flag, comprassions))//array[j] > middle
+                while (Swap_Comp.Comprassions(array, middle, j, flag, comprassions))//array[j] > middle
                 {
                     j--;
                     comprassions++;
@@ -86,20 +86,23 @@ namespace OAIP_10
         {
             int i = a;
             int j = b;
-            int middle = array[(a + b) / 2];
+            int middle = (a + b) / 2;
             while (i <= j)
             {
-                while (Comprassions(array, i, (a + b) / 2))//array[i] < middle
+                while (Swap_Comp.ComprassionsAnal(array, i, middle))//array[i] < middle
                 {
+                    comprassions++;
                     i++;
                 }
-                while (Comprassions(array, (a + b) / 2, j))//array[j] > middle
+                while (Swap_Comp.ComprassionsAnal(array, middle, j))//array[j] > middle
                 {
+                    comprassions++;
                     j--;
                 }
                 if (i <= j)
                 {
-                    Swap(array, i, j);
+                    permutations++;
+                    Swap_Comp.SwapAnal(array, i, j);
                     i++;
                     j--;
                 }
@@ -112,20 +115,6 @@ namespace OAIP_10
             {
                 Anal_FastSortArr(array, i, b);
             }
-        }
-
-        public void Swap(int[] arr, int ind1, int ind2)
-        {
-            permutations++;
-            int temp = arr[ind1];
-            arr[ind1] = arr[ind2];
-            arr[ind2] = temp;
-        }
-
-        public bool Comprassions(int[] arr, int ind1, int ind2)
-        {
-            comprassions++;
-            return arr[ind1] > arr[ind2];
         }
     }
 }

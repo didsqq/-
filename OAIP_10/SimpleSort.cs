@@ -58,14 +58,13 @@ namespace OAIP_10
                 int min = i;
                 for (int j = i + 1; j < mas.Length; j++)
                 {
-                    if (Comprassions(mas, j, min))
+                    if (Swap_Comp.ComprassionsAnal(mas, j, min))
                     {
-                        min = j;
                         comprassions++;
+                        min = j;
                     }
                 }
-
-                Swap(mas, min, i);
+                Swap_Comp.SwapAnal(mas, min, i);
                 permutations++;
             }
 
@@ -75,20 +74,6 @@ namespace OAIP_10
             analinfo.permutations = permutations;
             analinfo.comprassions = comprassions;
             analinfo.time = time;
-        }
-
-        public void Swap(int[] arr, int ind1, int ind2)
-        {
-            permutations++;
-            int temp = arr[ind1];
-            arr[ind1] = arr[ind2];
-            arr[ind2] = temp;
-        }
-
-        public bool Comprassions(int[] arr, int ind1, int ind2)
-        {
-            comprassions++;
-            return arr[ind1] > arr[ind2];
         }
     }
 }

@@ -41,5 +41,17 @@ namespace OAIP_10
                 FileOut.fileString += $"Сравнение {comprassions}: " + $"{arr[ind1]} и {arr[ind2]}\n";
             return arr[ind1] < arr[ind2];
         }
+
+        public static void SwapAnal(int[] arr, int ind1, int ind2)
+        {
+            int temp = arr[ind1];
+            arr[ind1] = arr[ind2];
+            arr[ind2] = temp;
+        }
+
+        public static bool ComprassionsAnal(int[] arr, int ind1, int ind2)
+        {
+            return arr[ind1] > arr[ind2];
+        }
     }
 }
