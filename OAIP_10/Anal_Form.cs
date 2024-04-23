@@ -53,7 +53,7 @@ namespace OAIP_10
             {
                 new Context(new SimpleSort()).AnalSortArr(sort);
 
-                dataGridView1.Rows.Add("Метод вставок", sort.count, sort.comprassions, sort.permutations, sort.time);
+                dataGridView1.Rows.Add("Метод выбором", sort.count, sort.comprassions, sort.permutations, sort.time);
             }
 
             AnalInfo[] ShellSorts =

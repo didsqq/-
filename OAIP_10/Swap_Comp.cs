@@ -25,8 +25,8 @@ namespace OAIP_10
             int temp = mas[i1];
             mas[i1] = mas[i2];
             mas[i2] = temp;
-
-            FileOut.Fill();
+            if(flag)
+                FileOut.Fill();
         }
 
         public static bool Comprassions(int[] arr, int ind1, int ind2, bool flag, int comprassions)
@@ -51,7 +51,7 @@ namespace OAIP_10
 
         public static bool ComprassionsAnal(int[] arr, int ind1, int ind2)
         {
-            return arr[ind1] > arr[ind2];
+            return arr[ind1] < arr[ind2];
         }
     }
 }

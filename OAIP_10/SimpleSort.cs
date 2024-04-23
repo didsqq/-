@@ -48,7 +48,7 @@ namespace OAIP_10
             Random random = new Random();
             int[] mas = new int[analinfo.count];
             for (int i = 0; i < analinfo.count; i++)
-                mas[i] = random.Next(0, 1000);
+                mas[i] = random.Next(0, 10000);
 
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
             sw.Start();
@@ -74,6 +74,8 @@ namespace OAIP_10
             analinfo.permutations = permutations;
             analinfo.comprassions = comprassions;
             analinfo.time = time;
+
+            var sortedArray = mas;
         }
     }
 }
